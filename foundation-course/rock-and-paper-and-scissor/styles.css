@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
+body {
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2, h1, p {
+  color: #fef2f2;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button{
+  height: 150px;
+  width: 150px;
+  border: 1px solid white;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s ease;
+}
+button:hover{
+  opacity: 90%;
+  transform: scale(1.1);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-box{
+  border: 10px solid #950740;
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  width: 500px;
+  text-align: center;
+}
+
+.scoreBoard {
+  display: none;
+  justify-content: center;
+  gap: 50px;
+  
+}
+
+.score, .roundNumber {
+  text-align: center;
+}
+
+/* Style for buttons */
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.image-container {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+#rock {
+  background-image: url("images/rock.png");
+}
+
+#paper {
+  background-image: url("images/paper.png");
+}
+
+#scissor {
+  background-image: url("images/scissors.png");
+}
+
+/* Message Section */
+.message-container {
+  border: 10px solid #950740;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.message{
+  display: block;
+}
+
+.winner{
+  display: none;
+}
+
+
+/* Start and Replay Section */
+#reset{
+  display: none;
+}
+.resetButton{
+  background-image: url("images/replay.png");
+}
+.startButton{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+
+/* Footer and attribute Section */
+.footer {
+  align-self: center;
+  margin-top: 30px;
+}
+.attribute {
+  color: #fef2f2
+}
+
+
+
+
+
+

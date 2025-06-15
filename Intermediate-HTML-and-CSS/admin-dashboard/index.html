@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Projects</title>
+
+  <!-- CSS code -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- JS Script -->
+  <script src="getCards.js" defer></script>  
+  <script src="toggle.js" defer></script>
+  
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Awesome Fonts -->
+  <script src="https://kit.fontawesome.com/21ccdd2009.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container" id ="dark">
+
+    <!-- Section header -->
+    <div class="header">
+
+      <div class="top-header">
+
+        <div class="search-container" id = "search-bg">
+          <div class="control">
+
+            <form action="">
+              <button type="submit" class="search-button">
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+              </button>
+              <input type="text" placeholder="Search ..." name="search" class="search-field" />
+            </form>
+
+            <button id = "changeToLight" value="light">
+              <span class="fa fa-sun-o fa-2x" aria-hidden="true"></span>
+            </button>
+
+            <button id = "changeToDark" value ='dark'>
+              <span class="fa fa-moon-o fa-2x" aria-hidden="true"></span>
+            </button>
+
+            <a href="https://github.com/xsymmetry9/Admin-Dashboard" target="_blank" title="GitHub repo for this project">
+              <span class="fa fa-github fa-2x" aria-hidden="true"></span>
+
+            </a>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="bottom-header">
+        <div class="greeting">
+          <h3 class="greet">Welcome,</h3>
+          <h2 class="greet-title">My Learning Project</h2>
+        </div>
+
+        <div class="social-media">
+          <button type="button" class="buttonStyle">NEW</button>
+          <button type="button" class="buttonStyle">UPLOAD</button>
+          <button type="button" class="buttonStyle">SHARE</button>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Section sideBar -->
+    <div class="side-bar">
+      <!-- Added this div for position: sticky -->
+      <div class="nav-bar">
+        <div class="logo-link"> <!--Nest Logo and Link together-->
+          <h2 class = "logo">Dashboard</h2>
+          <!-- Probably should use anchor tags. -->
+          <!-- Container -->
+          <div class="nav" id="links"> 
+            <div class="navCard">
+              <a href="#"><i class="fa fa-home side-icon" aria-hidden="true"></i>Home
+              </a>
+            </div>
+            <div class="navCard">
+              <a href="#"><i class="fa fa-address-card side-icon" aria-hidden="true"></i>Profile
+              </a>
+            </div>
+            <div class="navCard">
+              <a href="#"><i class="fa fa-commenting-o side-icon" aria-hidden="true"></i>Messages
+              </a>
+            </div>
+            <div class="navCard">
+              <a href="#"><i class="fa fa-clock-o side-icon" aria-hidden="true"></i>History
+              </a>
+            </div>
+            <div class="navCard">
+              <a href="#"><i class="fa fa-tasks side-icon" aria-hidden="true"></i>Tasks
+              </a>
+            </div>
+  
+          
+          </div> 
+          <!-- End Container -->
+    
+          <!-- Setting and Service Section -->
+          <div class="nav" id="setting">
+  
+            <div class="navCard">
+              <a href="#"><i class="fa fa-sliders side-icon" aria-hidden="true"></i>Tasks
+              </a>
+            </div>
+  
+            <div class="navCard">
+              <a href="#"><i class="fa fa-question side-icon" aria-hidden="true"></i>Support
+              </a>
+            </div>
+  
+            <div class="navCard">
+              <a href="#"><i class="fa fa-shield side-icon" aria-hidden="true"></i>Privacy
+              </a>
+            </div>
+          </div>
+          <!-- End of Service Section -->
+
+
+        </div>
+       
+  
+        <div class="attribute">
+          <p>Odin Project by Gary Lei</p>
+          <p>Icons by flaticons</p>
+        </div>
+      </div>
+    </div>
+  
+      <!-- This is where my portfolio goes -->
+    <div class="portfolio">
+        <h3>My Projects</h3>
+        <div class="projects">
+          <!-- My First Card -->
+          <div class="card" id = "card-x">
+            <div class="description">
+              <p class="title">My First Project</p>
+              <p>Created my first HTML project.</p>
+            </div>
+            <div class="icons">
+              <a href="#"><img class ="icon-card" src="icons/github.png" alt="star"></a>
+              <a href="#"><img class ="icon-card" src="icons/favorite.png" alt="star"></a>
+              <a href="#"><img class ="icon-card" src="icons/comment.png" alt="star"></a>
+            </div>
+          </div>
+          
+            <div class="card" id = "card-x">
+            <div class="description">
+              <p class="title">My Second Project</p>
+              <p>Created my first second project. hat the most difficult of web developing is
+                getting more the website.</p>
+            </div>
+            <div class="icons">
+              <a href="#"><img class ="icon-card" src="icons/github.png" alt="star"></a>
+              <a href="#"><img class ="icon-card" src="icons/favorite.png" alt="star"></a>
+              <a href="#"><img class ="icon-card" src="icons/comment.png" alt="star"></a>
+            </div>
+          </div> 
+ 
+
+        <!-- <-------------------------End of Section----------------------------------------- --> 
+      </div>
+    </div>
+
+    <!-- Announcement Section -->
+    <div class="right-side-bar">
+      <h3>Announcement</h3>
+        <!-- -------------------------------------------------------------------------------- -->
+      <div class="announcement-container">
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="announce-card">
+          <p class="title">Site Maintance</p>
+          <p class="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <hr class ="line">
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="announce-card">
+          <p class="title">Community Day</p>
+          <p class="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <hr class ="line">
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="announce-card">
+          <p class="title">News Title</p>
+          <p class ="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <!-- -------------------------------------------------------------------------------- -->
+      </div>
+        <!-- -------------------------------------------------------------------------------- -->
+
+
+      <!-- Trending Section -->
+      <h3>Followers</h3>
+        <!-- -------------------------------------------------------------------------------- -->
+      <div class="follower-container">
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="fol-card">
+          <img src="icons/young-man.png" alt="">
+          <div class="desc">
+            <p class="name">John James</p>
+            <p class="information">A doctor who lives in a country freely and loves to play video games</p>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="fol-card">
+          <img src="icons/young-man.png" alt="">
+          <div class="desc">
+            <p class="name">Tiffany Sanders</p>
+            <p class="information">A writer who lives in a village who enjoys life.</p>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="fol-card">
+          <img src="icons/young-man.png" alt="">
+          <div class="desc">
+            <p class="name">Samantha Bauer</p>
+            <p class="information">A programmer who is already retired and is trying to learn something new.</p>
+          </div>
+        </div>
+      </div>
+        <!-- ----------------------------------The end of Trending Section---------------------------------------------- -->
+    </div>
+        <!-- ------------------------------------The end of Right Side Section----------------------------------------- -->
+
+
+  </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="code.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <button class="create-form" type="button">New</button>
+    </div>
+    
+    <div class="form-container" id="add">
+        <form class="new-book">
+            <div class="form-row">
+                <label for="name">Title</label>
+                <input type="text" id="titleName" name="title" placeholder="Of Mice and Men">
+            </div>
+            <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="firstName" name="name" placeholder="John Steinbeck">
+            </div>
+            <div class="form-row">
+                <label for="page">Pages</label>
+                <input type="number" id="numPages" name="page" placeholder="107">
+            </div>
+            <div class="form-row-button">
+                <button class="add-book" type="submit">Add</button>
+                <button class="cancel-book" type="submit">Cancel</button>
+
+            </div>
+        </form>
+    </div>
+<div class="form-container" id="delete">
+    <form>
+        <div class="form-row">
+            <label for="name">Title</label>
+            <input type="text" id="titleName" name="title" placeholder="Of Mice and Men">
+        </div>
+        <div class="form-row-button">
+            <button class="delete-book" type="submit">Delete</button>
+            <button class="cancel-delete" type="submit">Cancel</button>
+        </div>
+    </form>
+</div>
+    <div class="library-container">
+        <h1>Library</h1>
+        <h3 class="title-book">Name of Book</h1>
+
+
+        <div class="myBooks">
+            <!-- Books goes here -->
+    
+ 
+            </div>
+     
+        </div>
+
+    </div>
+   
+    
+</body>
+</html>

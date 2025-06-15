@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(250,250,250);
+    background: url("https://images.unsplash.com/photo-1502481851512-e9e2529bfbf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80")
+}
+
+.container{
+    /* width: 100vh; */
+    height: 70vh;
+    /* border: 1px solid red; */
+    margin-inline: auto;
+}
+header > .header-container{
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.4)
+}
+header > .header-container p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 1.2rem;
+}
+
+input[type="search"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: lightgray;
+    padding: .42rem .8rem;
+    font-size: .9rem;
+    width: 250px;
+    border: none;
+    outline: 1px solid blue;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+input[type="search"]:focus{
+    border: 1px solid red;
+}
+.search-container{
+    display: flex;
+}
+.search-container > button{
+    color: white;
+    background-color: blue;
+    padding: .42rem .8rem;
+    font-size: .9rem;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+.search-container > button:hover{
+    color: black;
+    background-color: whitesmoke;
+    outline: blue 1px solid;
+}
+.weather-info{
+    margin-top: 3rem;
+    width: 100%;
+}
+.image-placer{
+    display: flex;
+    align-self: center;
+}
+.weather-info > .city-name{
+    font-size: 1.55rem;
+    font-weight: 400;
+    text-align: center;
+}
+.weather-info > .display-temperature-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.weather-info > .display-temperature-main > .img-temperature-container{
+    display: flex;
+    gap: .755rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.weather-info> .display-temperature-main img{
+    height: 50px;
+    width: 50px;
+}
+.weather-info > .display-temperature-main .show-temperature{
+    position: relative;
+    font-size: 3.4rem;
+}
+
+.weather-info > .display-temperature-main .category{
+    text-align: center;
+    padding-bottom: .8rem;
+    font-size: 1.55rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.text-align-center{
+    text-align: center;
+}

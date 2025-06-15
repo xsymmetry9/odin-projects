@@ -1,0 +1,621 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/poppins-regular-webfont.woff') format('woff'), url('../fonts/poppins-regular-webfont.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/poppins-bold-webfont.woff') format('woff'), url('../fonts/poppins-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold;
+}
+:root{
+    --ff-primary-regular: "Poppins-Regular";
+    --ff-primary-bold: "Poppins-Bold";
+    --ff-primary:'Poppins', sans-serif;
+    --dark: #000;
+    --light: #F9FAFB;
+    --gray: #DEE3EC;
+    --dark-gray: #6d6f71;
+    --red: rgb(215, 3, 3);
+    --teal: #39DAD0;
+    --blue: rgb(37, 118, 247);
+    --fc-sub-title: var(--blue);
+    --side-bar-max-width: 300px;
+}
+h1, h2, h3, h4, h5{
+    font-family: var(--ff-primary-bold);
+    color: var(--dark);
+}
+p, a, li, label, button{
+    font-family: var(--ff-primary-regular);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.text-decoration-line-through{
+    text-decoration: line-through;
+}
+.grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+    "side-bar main"
+    "side-bar main";
+    height: 100vh;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    grid-area: header;
+}
+
+.title{
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+}
+.side-bar{
+    grid-area: side-bar;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.5rem;
+}
+
+.nav-bar-menu
+{
+    padding: 1.2rem .6rem;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+.mobile-nav-toggle img[aria-hidden="false"]{
+    display: none;
+}
+.mobile-nav-toggle img[aria-hidden="true"]{
+    display: block;
+}
+@media (max-width: 55em)
+{
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .mobile-nav-toggle{
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: .5em;
+    }
+    .mobile-nav-toggle:hover, .mobile-nav-toggle:focus{
+        background-color: lightblue;
+    }
+
+}
+.nav-list{
+    padding-bottom: 3.2rem;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+
+}
+.nav-item span{
+    font-family: var(--ff-primary-bold);
+}
+
+.project-nav-title{
+    font-family: var(--ff-primary-bold);
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+}
+.project-list-item, .nav-item{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-family: var(--ff-primary-regular);
+    /* padding: .5rem 1.5rem; */
+}
+.project-list-item{
+    justify-content: space-between;
+}
+.project-list-item a{
+    padding: .5rem 1.5rem;
+}
+.project-list-item:hover, 
+.project-list-item:focus, 
+.nav-item:hover, 
+.nav-item:focus{
+    background-color: var(--dark-gray);
+    outline: var(--dark-gray) 1px solid;
+    border-radius: 5px;
+}
+.project-trash-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+
+}
+.project-trash-btn:hover,
+.project-trash-btn:focus{
+    background-color: var(--gray);
+    border-radius: 50%;
+}
+.project-trash{
+    height: 16px;
+}
+.nav-item-icon{
+    width: 1.5rem;
+}
+
+@media (max-width: 55em)
+{
+    .grid{
+        display: block;
+    }
+    .side-bar{
+        display: none;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .side-bar[data-visible]
+    {
+        display: block;
+        height: 100%;
+    }
+    .side-bar .title{
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+    .nav-item{
+        font-size: 1.3rem;
+        justify-content: left;
+    }
+    .nav-item-icon{
+        width: 2rem;
+    }
+    
+}
+.project-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-project-btn{
+    font-family: var(--ff-primary-bold);
+    line-height: 1.5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 29px;
+    border-radius: 15px;
+    
+}
+.add-project-btn:hover,
+.add-project-btn:focus{
+    background-color: var(--light);
+}
+#projects h3{
+    font-size: 1rem;
+}
+.intro-container{
+    width: 100%;
+    max-width: 70vh;
+    padding-bottom: 1.5rem;
+}
+.intro-container h1{
+    font-size: 3.6rem;
+    padding-bottom: 1.5rem;
+}
+.intro-container p{
+    line-height: 1.5;
+    padding-bottom: .8rem;
+}
+.project-btn-primary:hover,
+.project-btn-primary:focus{
+    background-color: var(--light);
+    color: var(--dark);
+    border: 2px solid blue;
+}
+.project-btn-primary{
+    font-size: .9rem;
+    color: var(--light);
+    padding: 1rem 1.4rem;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 55em)
+{
+    .project-list-item{
+        padding-right: 12px;
+    }
+}
+.title{
+    line-height: 1.5;
+}
+
+/* -------------------------Inbox Today and Upcoming Style -------------------------------------- */
+.page-title{
+    font-size: 2.5rem;
+    padding-bottom: 36px;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.row-title{
+    font-size: 1.2rem;
+    color: var(--blue);
+}
+.table .col:nth-child(-n+2){
+    border-right: 2px solid var(--dark-gray);
+}
+.table .row:first-child{
+    border-bottom: 2px solid var(--dark-gray);
+}
+.table .row{
+    padding: 8px 0 8px 8px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.body{
+    width: 80%;
+    max-width: 70vh;
+    grid-area: main;
+    padding: 5rem 2rem;
+    margin-inline: auto;
+
+}
+
+.project-header{
+    padding-bottom: 3rem;
+}
+.project-title{
+    text-transform: capitalize;
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+.project-description{
+    font-family: var(--ff-primary-regular);
+    font-size: 1rem;
+}
+/* ---------------- Project task items ---------------- */
+.project-task{
+    padding-bottom: 3rem;
+}
+.note-container,
+.task-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+.note-title,
+.task-title{
+    padding: .3rem 0;
+    color: var(--fc-sub-title);
+}
+
+.note-toggle-btn,
+.task-toggle-btn{
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 30px;
+}
+.task-toggle-btn:hover, .task-toggle-btn:focus,
+.note-toggle-btn:hover, .note-toggle-btn:focus{
+    color: white;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    border-radius: 100%;
+}
+.note-list,
+.task-list{
+    margin-top: 1.5rem;
+    line-height: 2;
+}
+.note-item,
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    padding-left: .2rem;
+}
+.task-item:hover,
+.task-item:focus,
+.note-item:hover,
+.note-item:focus{
+ 
+    border-radius: 5px;
+    background-color: lightgray;
+}
+.note-item-container,
+.task-item-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media (max-width: 55em){
+    .task-item-mov-toggle{
+        display: none;
+    }
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+}
+.checkbox img, .task-item-btn img, .note-trash-btn img{
+    height: 1rem;
+    width: 1rem;
+}
+.note-trash-btn,
+.task-item-btn{
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.note-trash-btn:focus, .note-trash-btn:hover,
+.task-item-btn:focus, .task-item-btn:hover{
+    background-color: var(--gray);
+    outline: 1px solid var(--gray);
+    border-radius: 5px;
+}
+
+.item-input{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+@media (max-width: 55em)
+{
+    .item-input{
+        flex-direction: column;
+    }
+}
+.input-container{
+    width: 100%;
+}
+.note-input,
+.todo-input{
+    font-family: var(--ff-primary-regular);
+    font-size: .9rem;
+    border: 1px solid var(--gray);
+    height: 40px;
+}
+.input-container input[type="text"]{
+    padding-left: .5rem;
+}
+.note-input{
+    width: 95%;
+}
+.input-container{
+    display: flex;
+    gap: 10px;
+}
+.input-container #task-name{
+    width: 70%;
+}
+
+
+
+
+/* To do section */
+
+.task-item-input input:hover,
+.task-item-input input:focus,
+.task-item-input input:visited{
+    border: 2px solid lightblue;
+}
+.todo-nav-container{
+    display: flex;
+    gap: 10px;
+    height: 40px;
+}
+.submit-button,
+.cancel-button{
+    cursor: pointer;
+    color: var(--light);
+    border-radius: 5px;
+    width: 80px;
+    padding: .8rem 0;
+}
+
+.submit-button{
+    background-color: green;
+    border: 1px solid green;
+}
+.cancel-button{
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+
+/* Project Forms */
+
+.add-project-window:after{
+    content: "";
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.303);   
+}
+
+.add-project{
+    position: fixed;
+    top: 30%;
+    width: 250px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    gap: .9rem;
+    border: 2px solid var(--dark);
+    padding: 3rem 5rem;
+    border-radius: 10px;
+    background-color: var(--light);
+    z-index: 10;
+}
+.project-btn{
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.project-btn span{
+    font-family: var(--ff-primary-regular);
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.form-item{
+    display: grid;
+    width: 250px;
+}
+.form-items{
+    padding-bottom: .5rem;
+}
+
+.form-item input[type="text"],
+.form-item input[type="date"],
+.form-item textarea{
+    font-family: var(--ff-primary);
+    padding: .3rem .5rem;
+}
+.form-item textarea{
+    height: 100px;
+
+}
+.close-btn{
+    position: absolute;
+    z-index: 10000;
+    top: 10px;
+    right: 10px;
+    padding: .08rem .5rem;
+    color:var(--gray);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close-btn:focus,
+.close-btn:hover{
+    background-color: var(--light);
+    color: var(--dark)
+}
+.add-project-submit-btn{
+    margin-inline: auto;
+    color: var(--light);
+    background-color: green;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: 1px solid green;
+    cursor: pointer;
+}
+.add-project-submit-btn:hover,
+.add-project-submit-btn:focus{
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+footer{
+    font-family: var(--ff-primary);
+    color: var(--dark);
+    font-size: .9rem;
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    padding-bottom: 30px;
+}
+@media (max-width: 55em)
+{
+    footer{
+        width: 100%;
+    }
+ 
+}
+.footer-container{
+    margin-inline: auto;
+}
+
+.attributes{
+    text-decoration: none;
+    color: var(--dark);
+    padding: .8rem 0;
+    text-align: center;
+}
+.attributes a{
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+
+/* ------------------  Todo Inbox, Today, Upcoming, Anytime and Someday page ----------------- */
+
+.todo-even-columns{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.todo-rows{
+    padding: .5rem 0;
+}
+.todo-title-text{
+    font-family: var(--ff-primary-bold);
+    color: var(--dark);
+    line-height: 1.5;
+}
+.project-title-text{
+    color: var(--dark-gray);
+    text-transform: capitalize;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,9 @@
+.image-size-large{
+    max-width: 500px;
+}
+.image-size-medium{
+    max-width: 150px;
+}
+.image-size-small{
+    max-width: 80px;
+}

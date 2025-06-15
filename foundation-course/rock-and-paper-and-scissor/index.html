@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Rock-Paper-Scissors Game</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <script src="mygame.js" defer></script>
+
+<!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game">
+      <div class ="title-box" id="title">
+        <h2>Rock Paper Scissors!!!</h2>
+      </div>
+      <!-- Replace title box to score box Code -->
+      <div class="scoreBoard" id="scoreBoard">
+        <div class="score-container">
+          <h2 class="player-title">Player 1</h2>
+          <h1 class="score" id="player1" value="0">0</h1>
+        </div>
+        <div class="score-container">
+          <h2 class="round">Round</h2>
+          <h1 class ="roundNumber" id="roundNumber">0</h1>
+        </div>
+        <div class="score-container">
+          <h2 class="player-title">Your Nemesis</h2>
+          <h1 class="score" id="player2" value="0">0</h1>
+        </div>
+
+      </div>
+
+      <!-- Game Button Code -->
+
+      <div class="box-container">
+        <div class=image-container>
+          <button class="buttons" id="rock" value="rock" disabled></button>
+        </div>
+
+        <div class=image-container>
+          <button class="buttons" id="paper" value="paper"disabled></button>
+        </div>
+
+        <div class="image-container">
+          <button class="buttons" id="scissor" value="scissors" disabled></button>
+
+        </div>
+
+      </div>
+
+
+ <!-- Message Box Code -->
+
+      <div class="message-container">
+        <h2 class="message">Are you ready?</h2>
+      </div>
+
+      <div class="message-container">
+        <h2 class="winner">And the winner is...</h2>
+        <button class ="resetButton" id="reset"></button>
+        <button class ="startButton" id ="start">Press Start</button>
+      </div>
+
+
+    </div>
+      <div class="footer">
+        <p>Copyright @ xsymmetry || Icons created by
+          <a class="attribute" href="https://www.flaticon.com/free-icons/" title="icons">Vitaly Gorbachev
+          </a>on <a class="attribute" href="flaticon.com">Flaticon</a>
+        </p>
+      </div>
+
+
+  </div>
+
+
+</body>
+
+</html>

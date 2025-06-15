@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title"><%= title %></h1>
+            <ul>
+                <% for (let i = 0; i<messages.length; i++) { %>
+                    <li>
+                        <p><strong>User:</strong> <%= messages[i].user %></p>
+                        <p><strong>Message:</strong> <%= messages[i].text %></p>
+                        <p><strong>Date: </strong> <%= messages[i].added.toLocaleString() %></p>
+                    </li>
+            
+                <% } %> 
+            </ul>
+    
+            <a href="/new">Add New Message</a>
+        </div>
+
+  
+    </body>
+</html>

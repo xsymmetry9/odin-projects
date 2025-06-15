@@ -1,0 +1,25 @@
+.header{
+    color: red;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    height: auto;
+    width: 500px;
+}
+#introduction{
+    color: blue;
+    font-size: 43px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    div{
+    color: white;
+    font-size: 32px;
+    background-color: green;
+    font-family:'Times New Roman', Times, serif;
+}

@@ -1,0 +1,73 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  margin-top: 3rem;
+}
+
+/* ---------------------------------------------------------------*/
+
+/*Create a Grid Area*/
+.clear{
+  grid-area: clear;
+}
+.delete{
+  grid-area: delete;
+}
+.divide{
+  grid-area: divide;
+}
+.equal{
+  grid-area: equal;
+}
+.container{
+  display: grid;
+  margin-top: 25px;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
+  gap: 12px;
+
+  grid-template-areas:
+  "clear clear delete divide"
+  "seven eight nine multiply"
+  "four five six subract"
+  "one two three add"
+  "posNeg decimal zero equal"
+}
+
+/* -----------------------Custom Buttons ----------------------*/
+.delete, .operatorPad, .numberPad, .equal{
+  border-radius: 50%;
+  border: none;
+}
+.clear{
+  border-radius: 8px;
+  border: none;
+}
+
+/* ---------------------------------------------------------------*/
+.calculator{
+  text-align: center;
+  width: auto;
+  background-color: #000000;
+  padding: 50px 20px 50px 20px;
+  border-radius: 16px;
+  border: none;
+}
+
+.screen{
+  text-align: right;
+  background-color: #EEEEEE;
+  border: solid 1px;
+  height: 100px;
+}
+.input{
+  font-size: 3rem;
+  height: 80px;
+}
+.result{
+  height: 20px;
+}
